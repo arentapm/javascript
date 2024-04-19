@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+    </head>
+<body>
+  <div id="clock"></div>
+  
+  <script>
+    function updateClock() {
+      var now = new Date();
+      var date = now.toDateString();
+      var time = now.toLocaleTimeString();
+      document.getElementById('clock').innerHTML = date + ' ' + time;
+    }
+    
+    setInterval(updateClock, 1000); // Update every second
+  </script>
+</body>
+</html>

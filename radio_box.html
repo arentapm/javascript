@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Klik pada musik yang paling anda sukai <br>
+    <form name = "formTes" 
+    method = "get">
+    <INPUT TYPE = "RADIO"
+        NAME = "radioMusik"
+        VALUE = "Jazz"
+        onClick="info()">Jazz<BR>
+    <INPUT TYPE = "RADIO"
+        NAME = "radioMusik"
+        VALUE = "Keroncong"
+        onClick="info()">Keroncong<BR>
+    <INPUT TYPE = "RADIO"
+        NAME= "radioMusik"
+        VALUE = "Dangdut"
+        onClick ="info()">Dangdut<BR>
+    <INPUT TYPE="RADIO"
+        NAME = "radioMusik”
+        VALUE = "Lainnya"
+        onClick="info()">Lainnya<BR>
+<hr>
+info :
+<input type="text"
+        name = "fieldMusik"
+        size="40">
+
+</FORM>
+    <script lang="JavaScript">
+        function info() {
+            for (var i = 0; i < 4; i++)
+            if (document.formTes.radioMusik[i].checked)
+                document.formTes.fieldMusik.value =
+                    document.formTes.radioMusik[i].value;
+        }
+    </script>
+</body>
+</html>

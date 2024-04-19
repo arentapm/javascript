@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu dengan jQuery</title>
+<style>
+    /* CSS untuk tampilan menu */
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px;
+        z-index: 1;
+    }
+    .menu a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    .menu a:hover {
+        background-color: #f1f1f1;
+    }
+    
+</style>
+</head>
+<body>
+
+<h2>Contoh Menu dengan jQuery</h2>
+
+<!-- Tombol untuk menampilkan menu -->
+<button id="showMenu">Tampilkan Menu</button>
+
+    <!-- Menu yang ditampilkan saat tombol ditekan -->
+    <div id="menu">
+    <a href="#">Menu 1</a>
+    <a href="#">Menu 2</a>
+    <a href="#">Menu 3</a>
+    </div>
+
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Script jQuery untuk menampilkan dan menyembunyikan menu -->
+<script>
+    $(document).ready(function(){
+    // Ketika tombol diklik, tampilkan atau sembunyikan menu
+    $("#showMenu").click(function(){
+        $("#menu").toggle();
+    });
+    });
+</script>
+
+</body>
+</html>

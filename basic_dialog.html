@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Dialog</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    .dialog-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+    }
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<button id="open-dialog">Buka Jendela Dialog</button>
+
+<div id="dialog" class="dialog-container">
+    <span class="close-btn"><i class="fas fa-times"></i></span>
+    <h2>Jendela Dialog</h2>
+    <p>Ini merupakan konten jendela dialog.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#open-dialog").click(function(){
+        $("#dialog").fadeIn();
+    });
+    
+    $(".close-btn").click(function(){
+        $("#dialog").fadeOut();
+    });
+    });
+</script>
+
+</body>
+</html>
