@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clock</title>
-    </head>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #clock {
+            font-size: 24px;
+        }
+    </style>
+</head>
 <body>
-  <div id="clock"></div>
+    <div id="clock"></div>
   
-  <script>
-    function updateClock() {
-      var now = new Date();
-      var date = now.toDateString();
-      var time = now.toLocaleTimeString();
-      document.getElementById('clock').innerHTML = date + ' ' + time;
-    }
-    
-    setInterval(updateClock, 1000); // Update every second
-  </script>
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var date = now.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            var time = now.toLocaleTimeString('id-ID');
+            document.getElementById('clock').innerHTML = date + '<br>' + time;
+        }
+        
+        setInterval(updateClock, 1000); 
+    </script>
 </body>
 </html>
